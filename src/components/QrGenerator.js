@@ -22,18 +22,18 @@ const QrGenerator = ()=>{
         })
     }
     return (
-        <div class="generator-container">
+        <div className="generator-container">
             <form onSubmit={onClickGenerate}>
-                <div class="mb-3">
-                    <label htmlFor="qr-input-data" class="form-label">Enter Input Data</label>
-                    <input id="qr-input-data" class="form-control" type="text" placeholder="QR DATA" onChange={onChangeData}/>
+                <div className="mb-3">
+                    <label htmlFor="qr-input-data" className="form-label">Enter Input Data</label>
+                    <input id="qr-input-data" className="form-control" type="text" placeholder="QR DATA" onChange={onChangeData}/>
                 </div>
-                <button type="submit" class="btn btn-primary">generate</button>
+                <button type="submit" className="btn btn-primary">generate</button>
             </form>
             {qrUrl===''?null:(
-                <div class="qr-generated">
-                    <img class="qr-image" src={qrUrl} alt="qr-code"/>
-                    <button type="button" class="btn btn-success save-button" onClick={toSaveQr}>save</button>
+                <div className="qr-generated">
+                    <img className="qr-image" src={qrUrl} alt="qr-code"/>
+                    <button type="button" className="btn btn-success save-button" onClick={toSaveQr}>save</button>
                 </div>
             )}
         </div>

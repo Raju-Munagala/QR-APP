@@ -22,7 +22,7 @@ const QrValidator = ()=>{
         qrScanner.start()
     }
     return (
-        <div class="validator-container">
+        <div className="validator-container">
             {scan?<video height="300" id="qrVideoScan"></video>:null}
             {scan?null:<button onClick={scanQr}><MdQrCodeScanner class="scan-icon"/></button>}
             {qrData==null?null:<p>{qrData}</p>}
